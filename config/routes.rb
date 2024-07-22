@@ -1,9 +1,9 @@
 Rails.application.routes.draw do
-  get 'client/home'
-  get 'client/accounts'
-  get 'client/account'
-  get 'client/tickets'
-  get 'client/ticket'
+  get "client/home"
+  get "client/accounts"
+  get "client/account"
+  get "client/tickets"
+  get "client/ticket"
   get "admin/accounts"
   get "admin/pages"
   get "admin/imports"
@@ -17,6 +17,7 @@ Rails.application.routes.draw do
   # Can be used by load balancers and uptime monitors to verify that the app is live.
   get "up" => "rails/health#show", as: :rails_health_check
 
+  mount ActiveStorageDB::Engine => "/active_storage_db"
   # Defines the root path route ("/")
   # root "posts#index"
 end

@@ -6,21 +6,9 @@ local:
   service: Disk
   root: <%= Rails.root.join("storage") %>
 
-digitalocean:
-  service: S3
-  endpoint: https://fra1.digitaloceanspaces.com
-  access_key_id: <%= "C58A976M583E23R1O00N" %>
-  secret_access_key: <%= Rails.application.credentials.dig(:digitalocean, :secret) %>
-  bucket: static-images-reflektor.fra1.digitaloceanspaces.com
-  region: unused<%= Rails.root.join("storage") %>
 
-
-
-<% 
-   space access keys secret key:  vTC5dWprguHmK/5b5kXkaHjZf9L4dBwiEti34OZ5uUA
-
-
-%>
+db:
+  service: DB
 # Use bin/rails credentials:edit to set the AWS secrets (as aws:access_key_id|secret_access_key)
 # amazon:
 #   service: S3

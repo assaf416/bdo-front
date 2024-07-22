@@ -68,3 +68,4 @@ end
 
 gem "image_processing", "~> 1.2"
 gem "aws-sdk-s3", "~> 1.111", ">= 1.111.1"
+gem "active_storage_db"
