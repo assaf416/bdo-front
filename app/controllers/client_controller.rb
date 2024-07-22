@@ -3,6 +3,7 @@ class ClientController < ApplicationController
   include ApplicationHelper
 
   def home
+    @mobile = true if mobile?(request).to_i > 0
   end
 
   def accounts
