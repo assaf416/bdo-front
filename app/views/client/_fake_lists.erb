@@ -1,0 +1,119 @@
+
+
+<div class="card">
+    <div class="card-body">
+    <h6 class="fw-semibold">טפסים למילוי</h6>
+
+    <ul class="nav nav-tabs nav-tabs-highlight">
+        <li class="nav-item">
+            <a href="#" class="nav-link active">
+                <span class="badge bg-dark rounded-pill me-2">2</span>
+                חוזים לחתיחה
+            </a>
+        </li>
+        <li class="nav-item">
+            <a href="#" class="nav-link">
+                טפסים 
+                <span class="badge bg-teal rounded-pill ms-2">3</span>
+            </a>
+        </li>
+        <li class="nav-item">
+            <a href="#" class="nav-link">
+                תמונות זיהוי
+                <span class="badge bg-teal rounded-pill ms-2">1</span>
+            </a>
+        </li>
+        
+    </ul>
+</div>
+
+
+  <div class="card-header"> 
+    <h6>
+    חוזים לחתימה
+    </h6>
+  </div>
+  <div class="card-body">
+    <table class="table table-hover">
+        <thead>
+          <tr>
+            <th width="64px"  ></th>
+            <th>שם החוזה</th>
+            <th width="50px"  ></th>
+          </tr>
+        </thead>
+        <tbody>
+            <% for doc in [ "חוזה פתיחת חשבון","אישורי מס","הסכמי סודיות"] do %>
+          <tr>
+            <td><i class="fas fa-file-pdf fa-2x text-info"></i></td>
+            <td><%= doc %> 
+            <br/ >
+נחתם בתאריך 
+            <%= (Time.now - rand(3).days).strftime("%d/%m/%Y") %></td>
+           <td class="text-right" >
+               <div class="ms-auto my-auto text-right">
+        <div class="btn-group">
+            <button type="button" class="btn btn-primary btn-icon dropdown-toggle show" data-bs-toggle="dropdown" aria-expanded="true">
+                <i class="ph-list"></i>
+            </button>
+            <div class="dropdown-menu dropdown-menu-end " style="position: absolute; inset: 0px 0px auto auto; margin: 0px; transform: translate3d(-0.5px, 40px, 0px);" data-popper-placement="bottom-end">
+                <a href="#" class="dropdown-item">מילוי הטופס</a>
+                <a href="#" class="dropdown-item">הורדת קובץ</a>
+                <div class="dropdown-divider"></div>
+                <a href="#" class="dropdown-item">טעינת תמונת זיהוי</a>
+            </div>
+        </div>
+    </div>
+            </td>
+          </tr>
+          <% end %>
+        </tbody>
+      </table>
+   </div>
+</div>
+<br/>
+<div class="card">
+
+<div class="card-header d-flex align-items-center py-0">
+    <h6 class="py-3 mb-0"> טפסים למילוי</h6>
+    <div class="ms-auto my-auto text-right">
+    </div>
+</div>
+
+  <div class="card-body">
+    <table class="table table-hover">
+        <thead>
+          <tr>
+            <th width="64px"  ></th>
+            <th>שם החוזה</th>
+            <th width="50px"  ></th>
+          </tr>
+        </thead>
+        <tbody>
+            <% for doc in [ "חוזה פתיחת חשבון","אישורי מס","הסכמי סודיות"] do %>
+          <tr>
+            <td><i class="fas fa-file-pdf fa-2x text-info"></i></td>
+             <td><%= doc %> 
+            <br/ >
+נחתם בתאריך 
+            <%= (Time.now - rand(3).days).strftime("%d/%m/%Y") %></td>
+            <td class="text-right" >
+               <div class="ms-auto my-auto text-right">
+        <div class="btn-group">
+            <button type="button" class="btn btn-primary btn-icon dropdown-toggle show" data-bs-toggle="dropdown" aria-expanded="true">
+                <i class="ph-list"></i>
+            </button>
+            <div class="dropdown-menu dropdown-menu-end " style="position: absolute; inset: 0px 0px auto auto; margin: 0px; transform: translate3d(-0.5px, 40px, 0px);" data-popper-placement="bottom-end">
+                <a href="#" class="dropdown-item">מילוי הטופס</a>
+                <a href="#" class="dropdown-item">הורדת קובץ</a>
+                <div class="dropdown-divider"></div>
+                <a href="#" class="dropdown-item">טעינת תמונת זיהוי</a>
+            </div>
+        </div>
+    </div>
+            </td>
+          </tr>
+          <% end %>
+        </tbody>
+      </table>
+   </div>

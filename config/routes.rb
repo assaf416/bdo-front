@@ -1,4 +1,9 @@
 Rails.application.routes.draw do
+  get 'client/home'
+  get 'client/accounts'
+  get 'client/account'
+  get 'client/tickets'
+  get 'client/ticket'
   get "admin/accounts"
   get "admin/pages"
   get "admin/imports"

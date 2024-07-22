@@ -1,0 +1,50 @@
+<div class="row">
+  <div class="col-lg-2"></div>
+  <div class="col-lg-8">
+
+
+    <% if @mobile == true %>
+    <div class="row">
+      <div class="col-xs-6">
+         <%= render "tile_chart_one" %>
+      </div>
+      <div class="col-xs-6">
+         <%= render "tile_chart_one" %>
+      </div>
+    </div>
+    <% else %>
+    <div class="row">
+      <div class="col-lg-3">
+         <%= render "tile_chart_one" %>
+      </div>
+      <div class="col-lg-3">
+         <%= render "tile_chart_one" %>
+      </div>
+      <div class="col-lg-3">
+         <%= render "tile_chart_one" %>
+      </div>
+      <div class="col-lg-3">
+         <%= render "tile_chart_one" %>
+      </div>
+    </div>
+
+    <% end %>
+    
+    
+
+
+<div class="row">
+  <div class="col-lg-12">
+        <%#= render "fake_compare_chart"%>
+        <%= render "fake_apex_chart"%>
+
+        <%= render "fake_lists"%>
+  </div>
+</div>
+
+  </div>
+  
+  </div>
+</div>
+
+
