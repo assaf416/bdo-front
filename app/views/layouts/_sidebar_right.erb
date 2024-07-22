@@ -1,0 +1,43 @@
+<div id='right-sidebar' class="sidebar sidebar-end  ">
+  <!-- /expand button --> <!-- Sidebar content -->
+  <div class="sidebar-content">
+    <ul class="nav nav-tabs nav-tabs-underline nav-justified mb-0" role="tablist">
+      <li class="nav-item" role="presentation">
+        <a href="#sidebar-chat" class="nav-link active" data-bs-toggle="tab" aria-selected="true" role="tab">
+          פגישות
+        </a>
+      </li>
+      <li class="nav-item" role="presentation">
+        <a href="#sidebar-tasks" class="nav-link " data-bs-toggle="tab" aria-selected="true" role="tab">
+          מטלות
+        </a>
+      </li>
+      <li class="nav-item" role="presentation">
+        <a href="#sidebar-notes" class="nav-link " data-bs-toggle="tab" aria-selected="true" role="tab">
+          הודעות
+        </a>
+      </li>
+    </ul>
+  </div>
+  <!-- /sidebar content -->
+  <div class="tab-content card-body">
+    <div class="tab-pane fade show active" id="sidebar-chat" role="tabpanel">
+      <div id='calendar-sidebar'></div>
+    </div>
+    <div class="tab-pane fade " id="sidebar-tasks" role="tabpanel">
+    </div>
+    <div class="tab-pane fade" id="sidebar-notes" role="tabpanel" style="padding:1em;">
+      <% @notes = Note.all.sample(5) %>
+      <%= render "shared/notes"%>
+    </div>
+  </div>
+</div>
+<script>
+  document.addEventListener('DOMContentLoaded', function() {
+    var calendarEl = document.getElementById('calendar-sidebar');
+    var calendar = new FullCalendar.Calendar(calendarEl, {
+      initialView: 'dayGridMonth'
+    });
+    calendar.render();
+  });
+</script>
