@@ -5,7 +5,7 @@ class CreateActiveStorageDBFiles < ActiveRecord::Migration[6.0]
   def change
     create_table :active_storage_db_files, id: primary_key_type do |t|
       t.string :ref, null: false
-      t.binary :data, null: false
+      t.binary :data, null: false, limit: 16777216
 
       if connection.supports_datetime_with_precision?
         t.datetime :created_at, precision: 6, null: false
