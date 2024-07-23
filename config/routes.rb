@@ -6,6 +6,7 @@ Rails.application.routes.draw do
   get "client/tickets"
   get "client/ticket"
   get "admin/accounts"
+  get "admin/account"
   get "admin/pages"
   get "admin/imports"
   get "admin/tickets"

@@ -9,6 +9,15 @@ local:
 
 db:
   service: DB
+
+digitalocean:
+  service: S3
+  endpoint: https://dalore-docs.fra1.digitaloceanspaces.com
+  access_key_id: DO00PQD33PEHHCUQ7PAA
+  secret_access_key: QS4xVMAqIMnEuFh58FEpZ44JpsBayw85MY1c4oNkqjo
+  bucket: bdo-files
+  region: unused
+
 # Use bin/rails credentials:edit to set the AWS secrets (as aws:access_key_id|secret_access_key)
 # amazon:
 #   service: S3

@@ -2,6 +2,9 @@ class AdminController < ApplicationController
   def accounts
   end
 
+  def account
+  end
+
   def imports
   end
 

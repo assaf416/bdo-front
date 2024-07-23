@@ -1,0 +1,222 @@
+<div class="row">
+  <div class="col-lg-4">
+    <div class="card">
+      <div class="card-header">
+        פרטי חשבון
+      </div>
+      <div class="card-body">
+        <table class="table table-hover">
+            <tbody>
+              <tr>
+                <td  width="150px">שם חשבון</td>
+                <td> <%=Faker::Name.name %> </td>
+              </tr>
+              <tr>
+                <td>סטטוס </td>
+                <td> פעיל </td>
+              </tr>
+            </tbody>
+          </table>
+       </div>
+      <div class="card-footer">
+        <a href="" class="btn btn-sm btn-info"> 
+            <i class="fas fa-plus"></i>&nbsp;
+                הוספת קיט
+        </a>
+        <a href="" class="btn btn-sm btn-info"> 
+            <i class="fas fa-download"></i>&nbsp;
+                הורדת מסמכים
+        </a>
+      </div>
+    </div>
+    <div class="card">
+      <div class="card-header">
+        פרטי המשתמש
+      </div>
+      <div class="card-body">
+       <table class="table table-hover">
+            <tbody>
+              <tr>
+                <td width="150px">שם המשתמש</td>
+                <td> <%=Faker::Name.name %> </td>
+              </tr>
+              <tr>
+                <td>מייל</td>
+                <td> <%=Faker::Name.name %> </td>
+              </tr>
+              <tr>
+                <td>סטטוס </td>
+                <td> פעיל </td>
+              </tr>
+            </tbody>
+          </table>
+       </div>
+      <div class="card-footer">
+        <a href="" class="btn btn-sm btn-danger"> 
+            <i class="fas fa-lock"></i>&nbsp;
+                נעילת משתמש
+        </a>
+        <a href="" class="btn btn-sm btn-info"> 
+            <i class="fas fa-plus"></i>&nbsp;
+                הוספת שדה
+        </a>
+      </div>
+    </div>
+    <div class="card">
+      <div class="card-header">
+שדות מחושבים
+      </div>
+      <div class="card-body">
+        Content
+       </div>
+      <div class="card-footer">
+        <a href="" class="btn btn-sm btn-info"> 
+            <i class="fas fa-plus"></i>&nbsp;
+                הוספת שדה
+        </a>
+      </div>
+    </div>
+
+   
+  </div>
+  <div class="col-lg-8">
+    <div class="card">
+      <div class="card-header">
+        מסמכים לחתימה
+      </div>
+      <div class="card-body">
+        <table class="table table-hover">
+            <thead>
+              <tr>
+                <th>שם המסמך</th>
+                <th>תאריך חתימה</th>
+                <th></th>
+              </tr>
+            </thead>
+            <tbody>
+                <%for doc in ["אישור ביטול סודיות","פתיחת חשבון מסחר","מיסים בארהב"]%>
+              <tr>
+                <td><%= doc %></td>
+                <td><%= (Time.now - rand(100).days).strftime("%d/%m/%Y") %></td>
+                <td></td>
+              </tr>
+              <% end %>
+            </tbody>
+          </table>
+       </div>
+       <div class="card-footer">
+        <a href="" class="btn btn-sm btn-info"> 
+            <i class="fas fa-plus"></i>&nbsp;
+                הוספת מסמך
+        </a>
+      </div>
+      
+    </div>
+
+    <div class="row">
+      <div class="col-lg-6">
+        <div class="card">
+      <div class="card-header">
+        טפסים למילוי
+      </div>
+      <div class="card-body">
+      <table class="table table-hover">
+            <thead>
+              <tr>
+                <th>שם המסמך</th>
+                <th>תאריך חתימה</th>
+                <th></th>
+              </tr>
+            </thead>
+            <tbody>
+                <%for doc in ["אישור ביטול סודיות","פתיחת חשבון מסחר","מיסים בארהב"]%>
+              <tr>
+                <td>
+                    <i class="fas fa-file-pdf"></i> &nbsp;
+                    <%= doc %>
+                </td>
+                <td><%= (Time.now - rand(100).days).strftime("%d/%m/%Y") %></td>
+                <td></td>
+              </tr>
+              <% end %>
+            </tbody>
+          </table>
+       </div>
+      <div class="card-footer">
+        <a href="" class="btn btn-sm btn-info"> 
+            <i class="fas fa-plus"></i>&nbsp;
+                הוספת מסמך
+        </a>
+      </div>
+    </div>
+      </div>
+      <div class="col-lg-6">
+         <div class="card">
+      <div class="card-header">
+        תמונות ומסמכים
+      </div>
+      <div class="card-body">
+       <table class="table table-hover">
+            <thead>
+              <tr>
+                <th>שם תמונה</th>
+                <th>תאריך טעינה</th>
+                <th></th>
+              </tr>
+            </thead>
+            <tbody>
+                <%for doc in ["חשבון חשמל","תעודת זהות","דרכון"]%>
+              <tr>
+                <td>
+                    <i class="fas fa-images"></i> &nbsp;
+                    <%= doc %>
+                </td>
+                <td><%= (Time.now - rand(100).days).strftime("%d/%m/%Y") %></td>
+                <td></td>
+              </tr>
+              <% end %>
+            </tbody>
+          </table>
+       </div>
+      <div class="card-footer">
+        Footer
+      </div>
+    </div>
+      </div>
+      
+    </div>
+ <div class="card">
+      <div class="card-header">
+        עדכוני סטטוס
+      </div>
+      <div class="card-body">
+        <div class="list-feed">
+            <div class="list-feed-item border-warning">
+                <div class="text-muted fs-sm mb-1">12 minutes ago</div>
+                <a href="#">David Linner</a> requested refund for a double card charge 
+            </div>
+
+            <div class="list-feed-item border-warning">
+                <div class="text-muted fs-sm mb-1">12 minutes ago</div>
+                User <a href="#">Christopher Wallace</a> is awaiting for staff reply
+            </div>
+
+            <div class="list-feed-item border-warning">
+                <div class="text-muted fs-sm mb-1">12 minutes ago</div>
+                Ticket <strong>#43683</strong> has been closed by <a href="#">Victoria Wilson</a>
+            </div>
+
+            <div class="list-feed-item border-warning">
+                <div class="text-muted fs-sm mb-1">12 minutes ago</div>
+                All sellers have received payouts for December!
+            </div>
+        </div>
+    </div>
+      <div class="card-footer">
+        Footer
+      </div>
+    </div>
+    
+   
+  </div>
+</div>
